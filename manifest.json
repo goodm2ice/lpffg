@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "LPFFG",
+    "version": "0.1",
+    "author": "Alexander <goodmice> Sirotkin",
+    "description": "Login/password field filling generator",
+    "homepage_url": "https://github.com/goodm2ice/lpffg",
+    "offline_enabled": true,
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "lpffg@goodmice.ru"
+        }
+    },
+    "background": {
+        "scripts": ["background/main.js"]
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content/menuGetTargetElementPolyfill.js", "content/main.js"]
+        }
+    ]
+}
