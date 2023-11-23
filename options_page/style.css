@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    display: flex;
+    background-color: #334;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    width: 100vw;
+}
+
+.preset-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid white;
+    padding: 10px;
+    max-width: 30vw;
+}
+
+.preset-list > span {
+    text-align: center;
+}
+
+.preset-list > .presets {
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.edit-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 10px;
+}
+
+.edit-form > .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-form > .buttons > .save-btn { flex: 1; }
+.edit-form > .buttons > :not(.save-btn) { padding: 0 20px; }
+
+.fields-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+}
+
+.preset {
+    padding: 5px;
+    transition: background .15s ease-in-out;
+    cursor: pointer;
+}
+
+.preset:hover { background: rgba(0, 0, 0, .4); }
+.preset:active { background: rgba(255, 255, 255, .2); }
+.preset.active { background: rgba(255, 255, 255, .4); }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LPFFG Settings</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="preset-list">
+            <span>Preset list</span>
+            <div class="presets"></div>
+            <button class="add-btn">Add new</button>
+        </div>
+        <form class="edit-form">
+            <div class="fields-grid" style="row-gap: 5px;">
+                <span>Label:</span>
+                <input type="text" name="label" placeholder="Label" required>
+                <span>Length:</span>
+                <input type="number" name="length" placeholder="Length (from 1 to 50)" value="15" min="1" max="50">
+            </div>
+            <div class="fields-grid">
+                <input type="checkbox" name="char_type" value="lower" checked>
+                <span>Upper case letters (A-Z)</span>
+                <input type="checkbox" name="char_type" value="upper" checked>
+                <span>Lower case letters (a-z)</span>
+                <input type="checkbox" name="char_type" value="numbers" checked>
+                <span>Numbers (0-9)</span>
+                <input type="checkbox" name="char_type" value="special">
+                <span>Special symbols (!@#$%^&*()-_=+~`'"\/&lt;&gt;,.)</span>
+            </div>
+            <div>
+                <input type="checkbox" name="no_repeat">
+                <span>Avoid repeat symbols</span>
+            </div>
+            <div class="buttons">
+                <button class="save-btn">Save</button>
+                <button class="abort-btn" type="reset">Abort</button>
+                <button class="delete-btn" disabled>Delete</button>
+            </div>
+        </form>
+    </body>
+</html>

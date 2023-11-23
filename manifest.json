@@ -18,10 +18,16 @@
         "activeTab",
         "contextMenus"
     ],
+    "optional_permissions": [
+        "storage"
+    ],
     "content_scripts": [
         {
             "matches": ["*://*/*"],
             "js": ["content/menuGetTargetElementPolyfill.js", "content/main.js"]
         }
-    ]
+    ],
+    "options_ui": {
+        "page": "options_page/index.html"
+    }
 }
